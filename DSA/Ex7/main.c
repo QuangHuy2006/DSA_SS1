@@ -1,12 +1,19 @@
-int checkIfDuplicated(){
-int a[n];
-    for(int i = 0; i < n; i ++){
-        for(int j = 0; j < n; j ++){
-            if(a[i] == a[j]){
-                return a[i];
-               }
+#include <stdio.h>
+int checking() {
+    int n[10]= {1,2,3,4,5,2,7,4,0,1};
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            if (n[i] == n[j]) {
+                return 1;
+            }
         }
     }
+    return 0;
 }
-//do phuc tao thoi gian la On2
-//do phuc tap khong gian la On
+int main() {
+    if (checking()) {
+        printf("Yes");
+    }else {
+        printf("No");
+    }
+}
